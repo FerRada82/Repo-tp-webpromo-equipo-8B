@@ -38,8 +38,16 @@
                     </div>
                 </div>
             </nav>
+
+            <div CssClass="container">
+            <br />
+
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+
             </asp:ContentPlaceHolder>
+            </div>
+
             <footer>
                 <hr />
                 Este es el footer
