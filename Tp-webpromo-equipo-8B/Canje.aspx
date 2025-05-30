@@ -6,20 +6,25 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 
-     <div class="row">
-      <div class="col-2"></div>
-      <div class="col">
-          <div class="mb-3">
-              <label for="exampleFormControlInput1" class="form-label">Ingresa el código del voucher!</label>
-              <asp:TextBox CssClass="form-control" ID="exampleFormControlInput1" placeholder="voucher" runat="server" />
-              
-          </div>
-          <div class="col-auto">
-              <asp:Button Text="Siguiente" CssClass="btn btn-primary mb-3" ID ="btnSiguiente" OnClick ="btnSiguiente_Click" runat="server"/>
-          </div>
-      </div>
-      <div class="col-2"></div>
-  </div>
-
+<div class="row justify-content-center mt-4">
+    <div class="col-12 col-md-8 col-lg-6">
+        <div class="mb-4">
+            <label for="exampleFormControlInput1" class="form-label fw-semibold" style="color: #7c3aed;">Ingresa el código del voucher</label>
+            <div class="input-group">
+                <span class="input-group-text" style="background-color: lavender;">
+                    <i class="bi bi-ticket-perforated" style="color: #7c3aed;"></i>
+                </span>
+                <asp:TextBox CssClass="form-control form-control-lg" ID="exampleFormControlInput1" 
+                    placeholder="Ej: XyZ456" runat="server" style="border-color: #7c3aed;"/>
+            </div>
+        </div>
+        
+        <div class="d-grid">
+            <asp:Button Text="Siguiente" CssClass="btn btn-lg py-2 fw-semibold" 
+                ID="btnSiguiente" OnClick="btnSiguiente_Click" runat="server"
+                style="background-color: #7c3aed; border-color:#7c3aed; color: white;"/>
+        </div>
+    </div>
+</div>
 </asp:Content>
 
