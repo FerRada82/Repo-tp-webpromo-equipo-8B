@@ -21,5 +21,7 @@ namespace Dominio
         public Marca Marca { get; set; }
         public Categoria Categoria { get; set; }
         public List<string> RutasImagenes { get; set; } = new List<string>();
+
+ 
     }
 }

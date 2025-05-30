@@ -1,0 +1,25 @@
+﻿
+<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="Canje.aspx.cs" Inherits="Tp_webpromo_equipo_8B.Canje" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+
+     <div class="row">
+      <div class="col-2"></div>
+      <div class="col">
+          <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Ingresa el código del voucher!</label>
+              <asp:TextBox CssClass="form-control" ID="exampleFormControlInput1" placeholder="voucher" runat="server" />
+              
+          </div>
+          <div class="col-auto">
+              <asp:Button Text="Siguiente" CssClass="btn btn-primary mb-3" ID ="btnSiguiente" OnClick ="btnSiguiente_Click" runat="server"/>
+          </div>
+      </div>
+      <div class="col-2"></div>
+  </div>
+
+</asp:Content>
+

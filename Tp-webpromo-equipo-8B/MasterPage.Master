@@ -48,10 +48,10 @@
             </asp:ContentPlaceHolder>
             </div>
 
-            <footer>
+           <!-- <footer>
                 <hr />
                 Este es el footer
-            </footer>
+            </footer>-->
         </div>
     </form>
 </body>
