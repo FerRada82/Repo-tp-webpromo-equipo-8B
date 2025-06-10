@@ -34,7 +34,7 @@ namespace Tp_webpromo_equipo_8B
             }
             else
             {
-                Response.Write("<script>alert('El código de voucher ya ha sido utilizado.');</script>");
+                Response.Write("<script>alert('El código de voucher no existe.');</script>");
             }
         }
     }

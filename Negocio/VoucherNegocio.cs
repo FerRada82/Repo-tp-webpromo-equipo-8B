@@ -96,7 +96,6 @@ namespace Negocio
 
                     voucher.codigoVoucher = (string)datos.Lector["codigoVoucher"];
 
-                    // Manejo seguro de valores NULL
                     voucher.cliente.ID = datos.Lector["idCliente"] != DBNull.Value ? (int)datos.Lector["idCliente"] : 0;
                     voucher.fechaCanje = datos.Lector["fechaCanje"] != DBNull.Value ? (DateTime)datos.Lector["fechaCanje"] : DateTime.MinValue;
                     voucher.articulo.Id = datos.Lector["idArticulo"] != DBNull.Value ? (int)datos.Lector["idArticulo"] : 0;
@@ -114,21 +113,5 @@ namespace Negocio
             return voucher;
         }
 
-        /*public void agregar(Vouchers nuevo)
-        {
-            AccesoDatos datos = new AccesoDatos();
-            try
-            {
-                datos.ejecutar();
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                datos.cerrarConexion();
-            }
-        }*/
     }
 }

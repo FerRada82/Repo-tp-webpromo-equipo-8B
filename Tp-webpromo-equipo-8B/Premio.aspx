@@ -54,7 +54,7 @@
                         <a href="FormularioCliente.aspx?id=<%: arti.Id %>" 
                            class="btn btn-sm px-3 py-2" 
                            style="background-color: #6c5ce7; color: white; border-radius: 8px;">
-                            Ver detalles
+                            Participar
                         </a>
                     </div>
                 </div>

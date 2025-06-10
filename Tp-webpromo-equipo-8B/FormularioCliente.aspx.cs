@@ -19,6 +19,12 @@ namespace Tp_webpromo_equipo_8B
 
         public void agregarCliente()
         {
+            if (!int.TryParse(txtDni.Text, out int dni) || dni <= 0)
+            {
+                Response.Write("<script>alert('El DNI debe ser un número positivo.');</script>");
+                //return; // Detenemos la ejecución si el DNI no es válido
+            }
+
             Cliente cliente = new Cliente();
             cliente.Dni = txtDni.Text;
             cliente.Nombre = txtNombre.Text;
@@ -52,6 +58,11 @@ namespace Tp_webpromo_equipo_8B
             int idArticulo = int.Parse(Request.QueryString["id"]);
             string mensajeError = "";
 
+            string dniTexto = txtDni.Text;
+            if (!int.TryParse(txtDni.Text, out int dniNumero) || dniNumero <= 0)
+            {
+                mensajeError += " El DNI debe ser Numerico Positivo ";
+            }
 
             if (campoVacio(txtDni.Text) || campoVacio(txtNombre.Text) || campoVacio(txtApellido.Text) || campoVacio(txtEmail.Text) || campoVacio(txtDireccion.Text) || campoVacio(txtCiudad.Text) || campoVacio(txtCP.Text))
             {
@@ -70,6 +81,7 @@ namespace Tp_webpromo_equipo_8B
             }
 
             string dni = txtDni.Text;
+          
             ClienteNegocio auxNegocio = new ClienteNegocio();
             Cliente aux = auxNegocio.BuscarPorDni(dni);
 
